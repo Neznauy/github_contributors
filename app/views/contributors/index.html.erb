@@ -1,0 +1,12 @@
+<%= render 'form' %>
+
+<% if @value[:source] %>
+  <% @value[:result].each_with_index do |v, i| %>
+    <p> 
+      <%= v %> <%= link_to "download pdf", send_pdf_path(position: i, source: @value[:source]), target: :_blank %>
+    </p>
+  <% end %>
+  <p>
+    <%= link_to "download zip", send_zip_path(source: @value[:source]), target: :_blank %>
+  </p>
+<% end %>

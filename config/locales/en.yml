@@ -31,3 +31,5 @@
 
 en:
   hello: "Hello world"
+  errors:
+    empty_cache: "File not found. Try to research repo"
